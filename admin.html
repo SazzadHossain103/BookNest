@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book CRUD</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h2>Add New Book</h2>
+            <form id="addBookForm" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Enter book title" required>
+                <input type="text" name="author" placeholder="Enter author" required>
+                <input type="text" name="category" placeholder="Enter category" required>
+                <input type="number" name="price" placeholder="Enter price" required>
+                <input type="file" name="image" required>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="book-list">
+            <h2>Book List</h2>
+            <div id="books"></div>
+        </div>
+    </div>
+
+    <!-- Popup for Edit -->
+    <div id="editPopup" class="popup">
+        <form id="editBookForm">
+            <input type="hidden" name="id">
+            <input type="text" name="title" required>
+            <input type="text" name="author" required>
+            <input type="text" name="category" required>
+            <input type="number" name="price" required>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
